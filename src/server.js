@@ -9,11 +9,11 @@ app.use(express.static('./views'));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.render('../views');
+    return res.render('../views');
 });
 
 app.get('/create', (req, res) => {
-    res.render('../views/Create');
+    return res.render('../views/Create');
 })
 
 app.post('/create', (req, res) => {
@@ -25,17 +25,22 @@ app.post('/create', (req, res) => {
         password
     )
 
-    res.send('ok');
+    return res.send('ok');
 })
 
 app.get('/login', (req, res) => {
-    res.render('../views/Login');
+    return res.render('../views/Login');
 })
 
-app.post('/login', (req, res) => {
-    console.log(req.body);
+app.post('/login', async (req, res) => {
+    const result = await newUser.findUser(req.body);
 
-    res.send('login');
+    if (result == true) {
+
+        return res.send('password correct');
+    }
+
+    return res.send('password error');
 })
 
 

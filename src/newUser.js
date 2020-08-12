@@ -4,7 +4,7 @@ function newUser(userName, email, passwod) {
     const user = {
         userName: userName,
         email: email,
-        passwod: passwod
+        password: passwod
     }
 
     const data = fs.readFileSync('./src/user.json', (err, data) => {
@@ -16,14 +16,28 @@ function newUser(userName, email, passwod) {
     fs.writeFileSync('./src/user.json', JSON.stringify(newUser, null, 2), 'utf-8');
 }
 
-function readUser() {
+async function findUser(jsonUser) {
     const data = fs.readFileSync('./src/user.json', (err, data) => {
+        if (err) {
+            return '';
+        }
+
         return data;
     })
-    return JSON.parse(data);
+
+    const parseData = JSON.parse(data);
+
+    let result = false
+    await parseData.forEach((value, index) => {
+        if (( jsonUser.userName == value.userName ) && ( jsonUser.password == value.password )) {
+            result = true;
+        }
+    })
+
+    return result;
 }
 
 module.exports = {
     newUser,
-    readUser
+    findUser
 };

@@ -1,9 +1,11 @@
 # Create account with fs (node-file-system)
 
 - How to install:
-    - __npm i__
-    - __npm run dev__
-    - __open http://localhost:3333__
+```js
+    % npm install
+    % npm run dev
+```
+> Open in your browser: _http://localhost:3333_
 
 ![demo](./img/demo.gif)
 
