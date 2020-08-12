@@ -1,0 +1,54 @@
+section div {
+    width: 30vw;
+    height: 30vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section form label {
+    margin: 10px 0;
+    width: 100%;
+}
+
+section form input {
+    width: 100%;
+    height: 30px;
+    background-color: var(--input-color);
+    color: white;
+    padding-left: 8px;
+    font-size: 14px;
+    border: 0;
+    outline: none;
+}
+
+section form button{
+    width: 70%;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 15px;
+    
+    background: var( --background-button);
+    font-weight: 500;
+    font-size: 18px;
+    border: 0;
+    border-bottom: 3px solid #c9573a;
+    border-right: 3px solid #c9573a;
+    border-radius: 10px;
+    color: black;
+
+    transition: 0.4s;
+}
+
+section form button:hover {
+    background-color: #c9573a;
+}

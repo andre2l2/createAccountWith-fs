@@ -1,0 +1,29 @@
+h1 {
+    margin-bottom: 100px;
+}
+
+section ul {
+    display: flex;
+}
+section li {
+    padding: 1.7rem;
+}
+
+section a {
+    background-color: var(--background-button);
+    padding: 1.7rem;
+    border-radius: 10px;
+}
+
+a {
+    color: var(--font-button-color);
+    font-weight: 500;
+    font-size: 18px;
+    border-bottom: 4px solid #c9573a;
+    border-right: 4px solid #c9573a;
+    transition: .4s;
+}
+
+a:hover {
+    background-color: #c9573a;
+}
