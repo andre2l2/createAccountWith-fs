@@ -1,7 +1,7 @@
 const express = require('express');
 const create = express.Router();
 
-const newUser = require('../newUser');
+const newUser = require('../util/newUser');
 
 create.get('/create', (req, res) => {
     return res.render('../views/Create');

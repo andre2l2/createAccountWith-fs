@@ -1,7 +1,7 @@
 const express = require('express');
 const login = express.Router();
 
-const newUser = require('../newUser');
+const newUser = require('../util/newUser');
 
 login.get('/login', (req, res) => {
     return res.render('../../views/Login');
