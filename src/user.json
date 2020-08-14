@@ -1,12 +1,7 @@
 [
   {
-    "userName": "andre_2l2",
-    "email": "delcferreira@gmail.com",
-    "password": "1234567"
-  },
-  {
-    "userName": "jose",
-    "email": "jose@gmail.com",
-    "password": "12345"
+    "userName": "admin",
+    "email": "admin@admin.com",
+    "password": "admin"
   }
 ]
