@@ -12,10 +12,10 @@ login.post('/login', async (req, res) => {
 
     if (result == true) {
 
-        return res.send('password correct');
+        return res.render('../views/AllOk', { isOk: 'Corect' });
     }
 
-    return res.send('password error');
+    return res.render('../views/AllOk', { isOk: 'Error!' });
 })
 
 module.exports = login;
