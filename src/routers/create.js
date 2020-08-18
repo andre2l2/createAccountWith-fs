@@ -16,7 +16,7 @@ create.post('/create', (req, res) => {
         password
     )
 
-    return res.send('ok');
+    return res.render('../views/AllOk', { isOk: 'Create!' });
 })
 
 module.exports = create;

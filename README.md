@@ -3,7 +3,7 @@
 - How to install:
 ```js
     % npm install
-    % npm run dev
+    % npm run start
 ```
 > Open in your browser: _http://localhost:3333_
 
