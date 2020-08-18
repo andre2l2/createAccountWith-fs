@@ -12,7 +12,7 @@ login.post('/login', async (req, res) => {
 
     if (result == true) {
 
-        return res.render('../views/AllOk', { isOk: 'Corect' });
+        return res.render('../views/AllOk', { isOk: 'Correct' });
     }
 
     return res.render('../views/AllOk', { isOk: 'Error!' });
