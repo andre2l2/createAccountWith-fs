@@ -37,6 +37,27 @@ async function findUser(jsonUser) {
     return result;
 }
 
+function checkUsers(userName = '', email = '') {
+    const fs = require('fs');
+
+    const users = fs.readFileSync('./user.json', (err, data) => {
+        if (err) return undefined;
+
+        return data;
+    })
+
+    const parseUsers = JSON.parse(users);
+
+    return parseUsers.map((item) => {
+        if (item.userName === userName || item.email === email) {
+            return undefined;
+        }
+        else {
+            return item;
+        }
+    })    
+    
+}
 module.exports = {
     newUser,
     findUser
